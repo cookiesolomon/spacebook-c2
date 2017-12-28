@@ -49,24 +49,27 @@ function renderPosts() {
 //  List all the comments and associated users below the post.
 
 function comments() {
-    $('.posts').append(
-       )
+   
 
 
-    $('.comments-button').on('click', function () {
+    $('.posts').on('click', ".comments-button",function () {
         if ($('#comments-area').val().length > 0) {
-            $('.posts').append('<div class="display-comment"><p>' + $('#user-name').val() + $('#comments-area').val() + '</p></div>');
+            $(this).append('<div class=".comments"><p>' + $('#user-name').val() + $('#comments-area').val() + '</p></div>');
 
             $('#user-name').val("");
             $('#comments-area').val("");
+            renderPosts();
         }
-
+      
     });
 
     $('.delete').on('click', function () {
-        $('.display-comment').remove();
+        $('.comments').remove();
 
     });
 
 }
 
+//will ony remove post---if remove them in order of data id,
+
+//will only post a comment from comments area..also doesnt display anymore
