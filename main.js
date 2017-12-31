@@ -46,6 +46,7 @@ var SpacebookApp = function () {
   };
 
   return {
+    //methods to access these functions outside the app
     createPost: createPost,
     renderPosts: renderPosts,
     removePost: removePost
@@ -68,3 +69,5 @@ $('.add-post').on('click', function () {
 $('.posts').on('click', 'a', function () {
   app.removePost(this);
 });
+
+//as of 31.12.17
